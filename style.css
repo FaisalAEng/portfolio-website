@@ -62,7 +62,7 @@ section {
 .project-card p {
     max-height: 0;               /* collapsed initially */
     overflow: hidden;            /* hide text */
-    transition: max-height 0.5s ease 1s; /* 0.5s animation, 1s delay before starting */}
+    transition: max-height 0.5s ease 0.5s; /* 0.5s animation, 1s delay before starting */}
 
 .project-card:hover p {
     max-height: 200px;           /* expands to show full text */
