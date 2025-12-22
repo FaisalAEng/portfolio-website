@@ -60,19 +60,18 @@ section {
 }
 /* or the description can appear only on hover, letting the image occupy most of the card initially */
 .project-card p {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
+    max-height: 0;               /* collapsed initially */
+    overflow: hidden;            /* hide text */
+    transition: max-height 0.5s ease 1s; /* 0.5s animation, 1s delay before starting */}
 
 .project-card:hover p {
-    max-height: 100px; /* expands to show text on hover */
+    max-height: 200px;           /* expands to show full text */
 }
 
 .project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    width: 100%;         /* span full card width */
+    height: auto;        /* keep aspect ratio */
+    object-fit: contain; /* no cropping */
 }
 .project-info {
     padding: 15px;
