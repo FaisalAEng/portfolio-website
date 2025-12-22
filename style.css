@@ -45,6 +45,27 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
+/* images were cropped out and didnt look good - this is to adjust so image is better and text is slightly more compact */
+.project-card {
+    display: flex;
+    flex-direction: column; /* image on top, text below */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;               /* space between image and text */
+    max-width: 350px;        /* optional: consistent card width */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+.project-card p {
+    font-size: 0.9rem;      /* slightly smaller text */
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;       /* compact line spacing */
+}
+/* or the description can appear only on hover, letting the image occupy most of the card initially */
+/*
 .project-card {
     background-color: white;
     border-radius: 8px;
@@ -55,6 +76,7 @@ section {
 .project-card:hover {
     transform: translateY(-5px);
 }
+*/
 .project-card img {
     width: 100%;
     height: 150px;
