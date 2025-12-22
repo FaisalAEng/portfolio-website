@@ -85,6 +85,26 @@ section {
     padding: 8px 12px;
     border-radius: 5px;
 }
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
 
+.skill-pill {
+    background-color: #007bff; /* Blue color for pills */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: default;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.skill-pill:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+}
 /* Resume & Contact buttons */
 section a.btn { margin-top: 10px; }
