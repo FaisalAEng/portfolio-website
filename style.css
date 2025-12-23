@@ -70,8 +70,8 @@ section {
     max-height: 2.8em;          /* ~2 lines */
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;      /* 🔑 number of visible lines */
+    display: -webkit-box;        /*got help finding and using this */
+    -webkit-line-clamp: 1;      /* number of visible lines */
     -webkit-box-orient: vertical;
     transition: max-height 0.3s ease;
 }
