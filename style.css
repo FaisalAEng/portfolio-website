@@ -53,19 +53,36 @@ section {
     align-items: center;
     padding: 10px;
     gap: 5px;               /* space between image and text */
-    max-width: 350px;        /* optional: consistent card width */
+    max-width: 350px;        /* consistent card width */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     border-radius: 8px;
     transition: transform 0.2s;
 }
-/* or the description can appear only on hover, letting the image occupy most of the card initially */
+/* the description appear only on hover, letting the image occupy most of the card initially */
 .project-card p {
     max-height: 0;               /* collapsed initially */
     overflow: hidden;            /* hide text */
     transition: max-height 0.5s ease 0.5s; /* 0.5s animation, 1s delay before starting */}
 
+.project-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-height: 2.8em;          /* ~2 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;      /* 🔑 number of visible lines */
+    -webkit-box-orient: vertical;
+    transition: max-height 0.3s ease;
+}
+
 .project-card:hover p {
     max-height: 200px;           /* expands to show full text */
+}
+
+.project-card:hover .project-desc {
+    max-height: 200px;          /* show full text */
+    -webkit-line-clamp: unset;
 }
 
 .project-card img {
