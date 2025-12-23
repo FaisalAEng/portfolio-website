@@ -58,6 +58,16 @@ section {
     border-radius: 8px;
     transition: transform 0.2s;
     position: relative; /*need to add this so position badge */
+    
+    /* project card border for all cards */
+    border: 1px solid #ccc;  /* light gray for all cards */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, border 0.3s;
+}
+/* border for featured cards */
+.project-card.featured {
+    border: 2px solid #bfa34a;  /* muted gold / accent color */
 }
 
 .project-desc {
@@ -110,6 +120,43 @@ section {
     font-weight: bold;
     border-radius: 12px;
     color: white;
+}
+
+.badge-top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e67e22; /* orange color */
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.badge-bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.7);  /* semi-transparent black */
+    color: white;
+    padding: 3px 6px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.badge-in-progress {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;  /* blue */
+    color: white;
+    padding: 3px 6px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    z-index: 2;
 }
 
 /*pick random colour for now, change later to polish */
