@@ -58,22 +58,17 @@ section {
     border-radius: 8px;
     transition: transform 0.2s;
 }
-/* the description appear only on hover, letting the image occupy most of the card initially */
-.project-card p {
-    max-height: 0;               /* collapsed initially */
-    overflow: hidden;            /* hide text */
-    transition: max-height 0.5s ease 0.5s; /* 0.5s animation, 1s delay before starting */}
 
 .project-desc {
     font-size: 0.9rem;
     line-height: 1.4;
-    max-height: 2.8em;          /* ~2 lines */
+    display: -webkit-box; /* Always visible preview */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;        /*got help finding and using this */
-    -webkit-line-clamp: 1;      /* number of visible lines */
-    -webkit-box-orient: vertical;
-    transition: max-height 0.3s ease;
+    max-height: 1.4em; /* 1 line */
+    transition: max-height 0.4s ease 0.8s; /* delayed expand */
 }
 
 .project-card:hover p {
@@ -81,15 +76,17 @@ section {
 }
 
 .project-card:hover .project-desc {
-    max-height: 200px;          /* show full text */
     -webkit-line-clamp: unset;
+    max-height: 200px;
 }
 
 .project-card img {
-    width: 100%;         /* span full card width */
-    height: auto;        /* keep aspect ratio */
-    object-fit: contain; /* no cropping */
+    width: 100%;
+    height: 240px;          /* uniform image height */
+    object-fit: contain;    /* show full image without cropping */
+    background-color: #f0f0f0; /* optional: visual consistency */
 }
+
 .project-info {
     padding: 15px;
 }
