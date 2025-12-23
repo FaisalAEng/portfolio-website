@@ -137,7 +137,7 @@ section {
 
 .badge-bottom-right {
     position: absolute;
-    bottom: 8px;
+    bottom: 5px;
     right: 10px;
     background-color: rgba(0,0,0,0.7);  /* semi-transparent black */
     color: white;
