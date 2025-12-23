@@ -57,6 +57,7 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     border-radius: 8px;
     transition: transform 0.2s;
+    position: relative; /*need to add this so position badge */
 }
 
 .project-desc {
@@ -98,6 +99,27 @@ section {
     font-weight: bold;
 }
 .project-link:hover { text-decoration: underline; }
+
+/*Badges */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+}
+
+/*pick random colour for now, change later to polish */
+.featured {
+    background-color: #e67e22; /* same orange as button */
+}
+
+.winner {
+    background-color: #2ecc71; /* subtle green */
+}
 
 /* Skills List */
 .skills-list {
