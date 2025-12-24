@@ -35,17 +35,19 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*was 250px*/
     gap: 20px;
+    align-items: start; /*all the cards align at top of their grid row to help with alignment issue */
 }
             /* images were cropped out and didnt look good - this is to adjust so image is better and text is slightly more compact */
 .project-card {
     display: flex;
     flex-direction: column; /* image on top, text below */
-    justify-content: flex-start;
+    justify-content: flex-start; /*try space-between if looks better; push content to fill card*/
     align-items: center;
     padding: 10px;
     gap: 5px;               /* space between image and text */
-    max-width: 300px;        /* consistent card width, was 350 */
-    position: relative; /*need to add this so position badge */
+    max-width: 300px;       /* consistent card width, was 350 */
+    /*height: 450px;          /* fixed height for all cards;to fix grid alignment issues */
+    position: relative;     /*need to add this so position badge */
     /* project card border for all cards */
     border: 1px solid #ccc;  /* light gray for all cards */
     border-radius: 8px;
@@ -54,7 +56,7 @@ section {
 }
         /* border for featured cards */
 .project-card.featured {
-    border: 2px solid #bfa34a;  /* muted gold / accent color */
+    border: 2px solid #bfa34a;  /* orange color */
 }
 
 .project-desc {
