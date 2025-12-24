@@ -158,17 +158,20 @@ section {
 }
 
 .project-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-  flex-wrap: wrap;
+    display: flex;    
+    gap: 8px;    /*reduced space between buttons*/
+    margin-top: auto;    /*push to card bottom*/
+    flex-wrap: wrap;    /*help keep buttons next to each other on mobile*/
+    justify-content: flex-start;     /*change to center if looks better */
+    padding-bottom: 35px; /*give space for badge below*/
 }
+
 /*Buttons*/
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px;
+  padding: 6px 10px; /*lowered to make buttons smaller a bit */
   border-radius: 6px;
   font-size: 0.9rem;
   margin-top: 10px;
