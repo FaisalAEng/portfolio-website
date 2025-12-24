@@ -105,14 +105,14 @@ section {
 .project-info p { 
     margin-bottom: 10px; 
 }
-/* use .project-links below, this was earlier when only used one */
-/*
+/* use .project-links below, this was earlier when only used one - remove later*/
+
 .project-link {
     color: #004080;
     text-decoration: none;
     font-weight: bold;
 }
-*/
+
 .project-link:hover { text-decoration: underline; }
 
 /*Badges */
