@@ -54,11 +54,7 @@ section {
     padding: 10px;
     gap: 5px;               /* space between image and text */
     max-width: 350px;        /* consistent card width */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    transition: transform 0.2s;
     position: relative; /*need to add this so position badge */
-    
     /* project card border for all cards */
     border: 1px solid #ccc;  /* light gray for all cards */
     border-radius: 8px;
@@ -80,10 +76,6 @@ section {
     text-overflow: ellipsis;
     max-height: 1.4em; /* 1 line */
     transition: max-height 0.4s ease 0.8s; /* delayed expand */
-}
-
-.project-card:hover p {
-    max-height: 200px;           /* expands to show full text */
 }
 
 .project-card:hover .project-desc {
@@ -169,6 +161,39 @@ section {
     z-index: 2;
 }
 
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.github-btn {
+  border: 1px solid #333;
+  color: #333;
+}
+
+.details-btn {
+  background: #007acc;
+  color: white;
+}
+
+.github-btn img {
+  width: 16px;
+  height: 16px;
+}
+
 /* Skills List */
 .skills-list {
     list-style: none;
@@ -205,3 +230,20 @@ section {
 }
 /* Resume & Contact buttons */
 section a.btn { margin-top: 10px; }
+
+/*For mobile use/usability */
+@media (max-width: 600px) {
+  .project-card img {
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
