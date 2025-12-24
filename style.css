@@ -22,15 +22,6 @@ header {
 }
 header h1 { font-size: 2.5em; }
 header p { margin: 15px 0; }
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #e67e22;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
 /* Sections */
 section {
@@ -61,7 +52,7 @@ section {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s, border 0.3s;
 }
-/* border for featured cards */
+        /* border for featured cards */
 .project-card.featured {
     border: 2px solid #bfa34a;  /* muted gold / accent color */
 }
@@ -105,15 +96,18 @@ section {
 .project-info p { 
     margin-bottom: 10px; 
 }
-/* use .project-links below, this was earlier when only used one - remove later*/
-
+        /* use .project-links below, this was earlier when only used one - remove later*/
+/*
 .project-link {
     color: #004080;
     text-decoration: none;
     font-weight: bold;
 }
-
+*/
+        /*removed above, so this not needed */
+/*
 .project-link:hover { text-decoration: underline; }
+*/
 
 /*Badges */
 .badge {
@@ -169,7 +163,7 @@ section {
   margin-top: 16px;
   flex-wrap: wrap;
 }
-
+/*Buttons*/
 .btn {
   display: inline-flex;
   align-items: center;
@@ -177,6 +171,9 @@ section {
   padding: 8px 14px;
   border-radius: 6px;
   font-size: 0.9rem;
+  margin-top: 10px;
+  background-color: #e67e22;
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
