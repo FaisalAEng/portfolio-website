@@ -46,7 +46,7 @@ section {
     padding: 10px;
     gap: 5px;               /* space between image and text */
     max-width: 300px;       /* consistent card width, was 350 */
-    height: 450px;          /* fixed height for all cards;to fix grid alignment issues */
+    /* height: 450px;          /* fixed height for all cards;to fix grid alignment issues - made buttons come out, didnt help*/
     position: relative;     /*need to add this so position badge */
     /* project card border for all cards */
     border: 1px solid #ccc;  /* light gray for all cards */
