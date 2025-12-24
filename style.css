@@ -46,11 +46,11 @@ section {
     justify-content: space-between; /* ensures info on top, links at bottom */
     align-items: stretch;  /* full width */
     max-width: 350px;
-    max-height: 480px; /* tweak as needed */
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     padding: 10px;
+    grid-auto-rows: 1fr
     /* **
     gap: 5px;               /* space between image and text */
     /* height: 450px;          /* fixed height for all cards;to fix grid alignment issues - made buttons come out, didnt help*/
@@ -90,7 +90,6 @@ section {
 }
 
 .project-info {
-    flex-grow: 1; /* takes remaining space */
     padding-bottom: 10px; 
 }
 
