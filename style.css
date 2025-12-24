@@ -31,28 +31,32 @@ section {
 }
 
 /* Projects Grid */
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*was 250px*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    align-items: start; /*all the cards align at top of their grid row to help with alignment issue */
+    align-items: start;  /* important! */
 }
+
             /* images were cropped out and didnt look good - this is to adjust so image is better and text is slightly more compact */
 .project-card {
     display: flex;
-    flex-direction: column; /* image on top, text below */
-    justify-content: flex-start; /*try space-between if looks better; push content to fill card*/
-    align-items: center;
-    padding: 10px;
-    gap: 5px;               /* space between image and text */
-    max-width: 300px;       /* consistent card width, was 350 */
-    /* height: 450px;          /* fixed height for all cards;to fix grid alignment issues - made buttons come out, didnt help*/
-    position: relative;     /*need to add this so position badge */
-    /* project card border for all cards */
-    border: 1px solid #ccc;  /* light gray for all cards */
+    flex-direction: column;
+    justify-content: space-between; /* ensures info on top, links at bottom */
+    align-items: stretch;  /* full width */
+    max-width: 350px;
+    max-height: 480px; /* tweak as needed */
+    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s, border 0.3s;
+    padding: 10px;
+    /* **
+    gap: 5px;               /* space between image and text */
+    /* height: 450px;          /* fixed height for all cards;to fix grid alignment issues - made buttons come out, didnt help*/
+    /* position: relative; ***/     /*need to add this so position badge */
+    /* project card border for all cards */
+    /* transition: transform 0.2s, border 0.3s; ***/
 }
         /* border for featured cards */
 .project-card.featured {
@@ -86,9 +90,8 @@ section {
 }
 
 .project-info {
-    padding: 15px;
-    position: relative; /* badges position relative to this container */
-    padding-bottom: 50px; /* extra space for bottom-right badge */
+    flex-grow: 1; /* takes remaining space */
+    padding-bottom: 10px; 
 }
 
 .project-info h3 { 
@@ -160,14 +163,12 @@ section {
 }
 
 .project-links {
-    display: flex;    
-    gap: 8px;    /*reduced space between buttons*/
-    margin-top: auto;    /*push to card bottom*/
-    flex-wrap: wrap;    /*help keep buttons next to each other on mobile*/
-    justify-content: flex-start;     /*change to center if looks better */
-    padding-bottom: 35px; /*give space for badge below*/
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start; /* side by side */
+    flex-wrap: wrap; /* only wrap if really needed on mobile */
+    margin-bottom: 5px; /* small space above badge */
 }
-
 /*Buttons*/
 .btn {
   display: inline-flex;
