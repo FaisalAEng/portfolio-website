@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Robotic Arm Prototype</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+
+<div class="project-page">
+
+<header>
+    <h1>Simple Robotic Arm Prototype</h1>
+    <p>Servo-Driven Multi-Link Manipulator</p>
+</header>
+
+<section>
+    <img src="../assets/images/projects/simple_robotic_arm.PNG"
+         alt="Simple Robotic Arm Prototype"
+         style="width:100%; max-width:700px; display:block; margin:30px auto; border-radius:8px;">
+</section>
+
+<section>
+    <h2>Project Summary</h2>
+    <p>
+        This project involved the design and construction of a low-cost robotic arm prototype 
+        to explore fundamental robotic system design, servo-based actuation, and Arduino control. 
+        Built using inexpensive materials and minimal tooling, the prototype was intended as a 
+        proof-of-concept learning platform rather than a high-performance manipulator.
+    </p>
+    <p>
+        The robotic arm successfully demonstrated basic pick-and-place functionality for lightweight objects, 
+        providing hands-on insight into mechanical layout, control logic, and practical limitations of 
+        rapid prototyping with low-cost materials.
+    </p>
+</section>
+
+<section>
+    <h2>Problem Statement & Objectives</h2>
+    <h3>Problem Statement</h3>
+    <p>
+        Design a simple robotic arm capable of picking up a lightweight object, repositioning it 
+        through horizontal and vertical motion, and releasing it at another location, using minimal 
+        materials and an Arduino-based control system.
+    </p>
+    <h3>Project Objectives</h3>
+    <ul>
+        <li>Build a functional robotic arm using low-cost, readily available materials</li>
+        <li>Implement multi-joint servo control using an Arduino UNO</li>
+        <li>Validate mechanical and control concepts through physical testing</li>
+        <li>Identify design limitations and improvement opportunities for future iterations</li>
+    </ul>
+</section>
+
+<section>
+    <h2>System Overview</h2>
+    <h3>Mechanical Architecture</h3>
+    <ul>
+        <li>Total arm length: ~20 cm</li>
+        <li>Link lengths: ~10 cm per segment</li>
+        <li>Degrees of Freedom:
+            <ul>
+                <li>Base rotation (horizontal motion)</li>
+                <li>Arm rotation (vertical motion)</li>
+                <li>Servo-driven gripper (open/close)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        The arm was constructed using wooden sticks, cardboard, string, and craft glue. All joints were 
+        servo-actuated revolute joints. The base was not externally mounted, resulting in instability under load 
+        and requiring manual stabilization during operation.
+    </p>
+    <h3>End Effector (Gripper)</h3>
+    <ul>
+        <li>One servo-driven movable claw</li>
+        <li>One stationary claw</li>
+        <li>Rubber band friction surfaces to improve grip</li>
+    </ul>
+    <p>This configuration reduced complexity and improved reliability compared to an earlier dual-motor gripper concept.</p>
+</section>
+
+<section>
+    <h2>Electronics and Control</h2>
+    <h3>Actuation and Hardware</h3>
+    <ul>
+        <li>Controller: Arduino UNO R3</li>
+        <li>Motors: SG90 9g servo motors</li>
+        <li>Power: Arduino 5 V rail</li>
+    </ul>
+    <p>No power brownout or overheating issues were observed during testing; configuration is suitable only for low-load operation.</p>
+
+    <h3>Control Strategy</h3>
+    <ul>
+        <li>Open-loop servo position control (no feedback sensors)</li>
+        <li>Pushbuttons for continuous joint rotation</li>
+        <li>Slide switch for gripper open/close control</li>
+        <li>Servo angle limits tuned to prevent over-rotation (gripper: 50° open, 120° closed)</li>
+    </ul>
+
+    <h3>Simulation</h3>
+    <p>
+        Circuit and control logic were first developed and tested in TinkerCAD, allowing verification 
+        of motor behavior and input logic before physical assembly.
+    </p>
+</section>
+
+<section>
+    <h2>Design Iterations</h2>
+    <h3>Initial Concept</h3>
+    <ul>
+        <li>Four servo motors: two for arm motion, two for gripper claws</li>
+        <li>Button-based control for all joints</li>
+        <li>Increased wiring complexity and limited breadboard space</li>
+    </ul>
+
+    <h3>Refined Design</h3>
+    <ul>
+        <li>Reduced to three servo motors</li>
+        <li>Simplified gripper with a single actuated claw</li>
+        <li>Replaced gripper buttons with a slide switch to conserve I/O space</li>
+        <li>Removed unnecessary linkages to improve stability and weight distribution</li>
+    </ul>
+    <p>These changes improved usability and robustness without sacrificing required functionality.</p>
+</section>
+
+<section>
+    <h2>Testing and Results</h2>
+    <h3>Degrees of Freedom and Motion</h3>
+    <ul>
+        <li>DoF 1: Base rotation (horizontal motion)</li>
+        <li>DoF 2: Arm rotation (vertical motion)</li>
+        <li>Gripper: Opening and closing motion (excluded from DoF count)</li>
+    </ul>
+
+    <h3>Iteration 1 – Initial Concept</h3>
+    <p><strong>Test Scenario:</strong> Pick up and relocate a crumpled paper object</p>
+    <p><strong>Observed Performance:</strong> Horizontal and vertical motions were repeatable; gripper successfully grasped and released lightweight objects. Motion smoothness limited by structural flex and servo mounting rigidity.</p>
+    <p><strong>Limitations Identified:</strong> Fragile construction, base instability, limited dexterity. Prototype still completed the pick-and-place task consistently.</p>
+</section>
+
+<section>
+    <h2>Key Engineering Takeaways</h2>
+    <ul>
+        <li>Mechanical rigidity is critical even for low-load prototypes</li>
+        <li>Simplifying actuation and control improves reliability more than adding complexity</li>
+        <li>Simulation tools are effective for validating control logic before hardware assembly</li>
+        <li>Low-cost materials are sufficient for validating system-level concepts</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Future Improvements</h2>
+    <ul>
+        <li>Replace structural elements with 3D-printed components</li>
+        <li>Use servo mounting brackets and fasteners for improved rigidity</li>
+        <li>Implement potentiometer or joystick-based proportional control</li>
+        <li>Add additional degrees of freedom, such as a wrist joint</li>
+        <li>Redesign the gripper with interchangeable or compliant tips</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>
+        This robotic arm prototype met its objective as a learning-focused proof-of-concept system. 
+        While structurally limited, it successfully demonstrated multi-joint servo control, basic manipulation, 
+        and iterative design decision-making. The insights gained inform future designs with improved 
+        materials, refined control strategies, and enhanced mechanical performance.
+    </p>
+</section>
+
+<section id="links">
+    <h2>Links & Deep Dives</h2>
+    <div class="project-links">
+    <ul>
+        <li><a href="https://FaisalAEng.github.io/portfolio-website/projects/robotic_arm_prototype\robotic_arm_prototype_ar.pdf" class="btn pdf-btn" target="_blank">View PDF Report</a></li>
+        <li><a href="https://https://github.com/FaisalAEng/Simple_Robotic_Arm" class="btn github-btn" target="_blank"> View GitHub</a></li>
+        <li><a href="https://faisalaeng.github.io/portfolio-website/" class="btn btn-portfolio">Back to Portfolio</a></li>
+    </ul>
+    </div>
+</section>
+
+<footer style="text-align:center; padding:40px 0; color:#777;">
+    <p>© 2026 Faisal A. Mechanical Engineering Portfolio. All rights reserved.</p>
+</footer>
+
+</div>
+</body>
+</html>
