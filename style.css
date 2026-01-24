@@ -322,3 +322,134 @@ section {
     .project-page h1 { font-size: 1.8em; }
     .project-page h2 { font-size: 1.5em; }
 }
+
+
+/* Basic page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.project-page header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    background-color: #f5f5f5;
+}
+
+.project-page header h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+
+.project-page header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Navigation */
+nav {
+    background-color: #eee;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+nav h2 {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600; /* Accent hover color */
+}
+
+/* Section styling */
+section {
+    padding: 20px 20px 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Placeholder styling */
+div[style*="border:2px solid red"] {
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    text-align: center;
+    font-weight: bold;
+    color: #990000;
+    font-size: 0.9em;
+}
+
+/* Flex containers for images */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-container div {
+    flex: 1;
+    min-width: 250px;
+    height: 180px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 5px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6600; /* Accent color */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 30px 20px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    section h2 {
+        font-size: 1.4em;
+    }
+}
