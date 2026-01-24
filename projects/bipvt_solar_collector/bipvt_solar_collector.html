@@ -16,6 +16,7 @@
     </header>
 
     <main>
+
         <!-- Table of Contents -->
         <nav>
             <h2>Contents</h2>
@@ -28,7 +29,7 @@
                 <li><a href="#modeling">Modeling & Analysis Approach</a></li>
                 <li><a href="#calculations">Key Calculations & Performance Metrics</a></li>
                 <li><a href="#results">Results & Performance Evaluation</a></li>
-                <li><a href="#tradeoffs-limitations">Design Tradeoffs, Limitations & Future Work</a></li>
+                <li><a href="#tradeoffs">Design Tradeoffs & Decisions</a></li>
                 <li><a href="#tools">Tools, Skills & Methods</a></li>
                 <li><a href="#role">My Role & Contributions</a></li>
                 <li><a href="#links">Links & Deep Dives</a></li>
@@ -38,69 +39,55 @@
         <!-- Sections -->
         <section id="overview">
             <h2>Project Overview</h2>
-            <p>
-                This capstone project focused on designing and optimizing a <strong>building-integrated photovoltaic/thermal (BIPV/T) solar air collector</strong> for residential heating. The system recovers heat from PV panels while maintaining lower panel temperatures to improve electricity generation.
-            </p>
-            <p>
-                Simulations and calculations guided the evaluation of passive, cost-effective design modifications such as airflow baffles and turbulence-enhancing features. The project applied principles of <strong>fluid mechanics</strong>, <strong>heat transfer</strong>, and <strong>thermal system design</strong> within a collaborative, team-based capstone environment.
-            </p>
-            <p>
-                Multiple airflow enhancement concepts were explored to improve convective heat transfer and outlet air temperature. The final design demonstrates how modest changes to the air channel can efficiently extract thermal energy, benefiting both heating efficiency and PV performance.
-            </p>
-            <figure>
-                <img src="images/bipvt_reference_panel.jpg" alt="Reference PV panel used for BIPV/T design">
-                <figcaption>Figure 1: Reference PV panel used for BIPV/T system design.</figcaption>
-            </figure>
+
+            <!-- Hero Section -->
+            <div style="display:flex; flex-wrap:wrap; gap:20px; margin-bottom:20px;">
+                <div style="flex:1; min-width:250px; height:200px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">
+                    HERO DIAGRAM PLACEHOLDER
+                </div>
+                <div style="flex:1; min-width:250px; height:200px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">
+                    PROJECT PHOTO PLACEHOLDER
+                </div>
+            </div>
+
+            <p>This capstone project focused on designing and optimizing a building-integrated photovoltaic/thermal (BIPV/T) solar air collector for residential heating. The aim was to recover heat from PV panels while keeping their temperature lower to improve electricity generation.</p>
+
+            <p>Simulations and calculations guided the evaluation of passive, cost-effective design modifications such as airflow baffles and turbulence-enhancing features. The project applied principles of fluid mechanics, heat transfer, and thermal system design within a collaborative, team-based capstone environment.</p>
+
+            <p>Multiple airflow enhancement concepts were explored to improve convective heat transfer and outlet air temperature. The final design demonstrates how modest changes to the air channel can efficiently extract thermal energy, benefiting both heating efficiency and PV performance.</p>
         </section>
 
         <section id="problem">
             <h2>Problem Definition & Context</h2>
-            <p>
-                Residential heating in Ontario has historically relied on <strong>natural gas</strong> due to low fuel costs. Rising energy prices and climate targets are motivating <strong>low-carbon heating solutions</strong>.
-            </p>
-            <p>
-                Solar photovoltaic (PV) panels convert only part of the sun’s energy into electricity; the rest is lost as heat, which reduces PV efficiency and can degrade materials over time.
-            </p>
-            <p>
-                <strong>BIPV/T systems</strong> recover heat from the underside of PV panels for space heating or as preheated intake for heat pumps. Effective thermal recovery requires well-distributed airflow and turbulence within the air channel.
-            </p>
-            <figure>
-                <img src="images/thermal_loss_conventional.jpg" alt="Conventional PV panel thermal losses">
-                <figcaption>Figure 2a: Heat lost from conventional PV panels.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/thermal_recovery_bipvt.jpg" alt="BIPV/T panel thermal recovery illustration">
-                <figcaption>Figure 2b: Thermal energy recovered by BIPV/T system.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/energy_comparison_sankey.jpg" alt="Energy lost vs recovered by BIPV/T system">
-                <figcaption>Figure 2c: Comparison of energy lost to the environment versus energy recovered by the BIPV/T system.</figcaption>
-            </figure>
+            <p>Residential heating in Ontario has historically relied on <strong>natural gas</strong> due to low fuel costs. Rising energy prices and climate targets are motivating low-carbon heating solutions.</p>
+            <p>Solar photovoltaic (PV) panels convert only part of the sun’s energy into electricity; the rest is lost as heat. Excess heat reduces PV efficiency and can degrade materials over time.</p>
+            <p><strong>BIPV/T systems</strong> recover heat from the underside of PV panels for space heating or as preheated intake for heat pumps. Effective thermal recovery requires well-distributed airflow and turbulence within the air channel.</p>
+            <p>Conventional air channels often have poor mixing and low turbulence, limiting heat recovery. This project addresses these challenges with <strong>passive, cost-effective airflow enhancements</strong>.</p>
+
+            <div style="border:2px solid red; background-color:#ffecec; height:180px; display:flex; align-items:center; justify-content:center; margin-top:15px;">
+                ENERGY LOSS / AIRFLOW SCHEMATIC PLACEHOLDER
+            </div>
         </section>
 
         <section id="system">
             <h2>System Description</h2>
-            <p>
-                The <strong>BIPV/T system</strong> consists of PV panels mounted above a sealed <strong>air channel</strong>. Outdoor air flows through the channel, absorbing heat from the panel underside. The heated air can be used for space heating or as preheated intake for a heat pump.
-            </p>
+            <p>The BIPV/T system consists of <strong>PV panels mounted above a sealed air channel</strong>. Outdoor air flows through the channel, absorbing heat from the panel underside. The heated air can be used directly for space heating or as preheated intake for a heat pump.</p>
             <ul>
                 <li><strong>Air Channel:</strong> Guides airflow beneath PV panels.</li>
                 <li><strong>Fan:</strong> Ensures consistent airflow.</li>
                 <li><strong>Enhancement Features:</strong> Passive baffles or porous mesh to promote turbulence and mixing.</li>
                 <li><strong>Inlet & Outlet:</strong> Designed to improve uniform flow and pressure distribution.</li>
             </ul>
-            <figure>
-                <img src="images/system_schematic.jpg" alt="BIPV/T system schematic">
-                <figcaption>Figure 3a: Schematic of BIPV/T system airflow path and enhancements.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/system_real_photo.jpg" alt="BIPV/T system real-world photo">
-                <figcaption>Figure 3b: Real-world installation of the BIPV/T system.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/energy_flow_sankey.jpg" alt="BIPV/T system energy flow diagram">
-                <figcaption>Figure 3c: Conceptual energy-flow diagram showing sunlight → PV → heat recovery → air heating.</figcaption>
-            </figure>
+            <p>The system balances heat extraction efficiency with low airflow resistance, suitable for residential applications.</p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:15px;">
+                <div style="flex:1; min-width:250px; height:180px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">
+                    SYSTEM SCHEMATIC PLACEHOLDER
+                </div>
+                <div style="flex:1; min-width:250px; height:180px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">
+                    REAL INSTALLATION PHOTO PLACEHOLDER
+                </div>
+            </div>
         </section>
 
         <section id="objectives">
@@ -112,115 +99,76 @@
                 <li><strong>Minimize pressure losses:</strong> Ensure stable operation.</li>
                 <li><strong>Residential suitability:</strong> Simple, low-cost, easy rooftop integration.</li>
             </ul>
-            <figure>
-                <img src="images/objectives_enhancements_overlay.jpg" alt="Annotated schematic linking objectives to enhancements">
-                <figcaption>Figure 4: Annotated schematic showing how design enhancements address engineering objectives.</figcaption>
-            </figure>
+
+            <div style="border:2px solid red; background-color:#ffecec; height:180px; display:flex; align-items:center; justify-content:center; margin-top:15px;">
+                OBJECTIVES DIAGRAM PLACEHOLDER
+            </div>
         </section>
 
         <section id="design-concepts">
             <h2>Design Concepts Explored</h2>
-            <h3>Baseline Configuration</h3>
-            <p>No internal airflow enhancements were used. This served as a reference for evaluating other strategies.</p>
-            <figure>
-                <img src="images/baseline_airflow.jpg" alt="Baseline airflow schematic">
-                <figcaption>Figure 5: Baseline airflow distribution.</figcaption>
-            </figure>
+            <ul>
+                <li><strong>Baseline:</strong> No internal enhancements; serves as reference.</li>
+                <li><strong>Guiding Wall:</strong> Redirects airflow for uniform distribution.</li>
+                <li><strong>Fin-Based:</strong> Longitudinal fins disrupt laminar flow.</li>
+                <li><strong>Porous Mesh:</strong> Promotes turbulence with minimal pressure drop.</li>
+            </ul>
 
-            <h3>Guiding Wall Concept</h3>
-            <p>Internal walls redirected airflow, reducing stagnation zones and promoting uniform flow.</p>
-            <figure>
-                <img src="images/guiding_wall_cfd.jpg" alt="Guiding wall CFD airflow simulation">
-                <figcaption>Figure 6: Guiding wall airflow simulation.</figcaption>
-            </figure>
-
-            <h3>Fin-Based Enhancement</h3>
-            <p>Longitudinal fins increased surface area and disrupted laminar flow, improving heat transfer.</p>
-            <figure>
-                <img src="images/fin_enhancement_cfd.jpg" alt="Fin-based CFD airflow & temperature contour">
-                <figcaption>Figure 7: CFD simulation of fin-based enhancement.</figcaption>
-            </figure>
-
-            <h3>Porous Mesh Enhancement</h3>
-            <p>A porous metal mesh promoted turbulence and mixing throughout the channel with minimal fan power increase.</p>
-            <figure>
-                <img src="images/porous_mesh_cfd.jpg" alt="Porous mesh CFD simulation">
-                <figcaption>Figure 8: CFD simulation of porous mesh enhancement.</figcaption>
-            </figure>
-
-            <p>Interactive idea: slider toggle to compare baseline vs final design airflow.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:15px;">
+                <div style="flex:1; min-width:150px; height:150px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">BASELINE</div>
+                <div style="flex:1; min-width:150px; height:150px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">GUIDING WALL</div>
+                <div style="flex:1; min-width:150px; height:150px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">FINS</div>
+                <div style="flex:1; min-width:150px; height:150px; border:2px solid red; background-color:#ffecec; display:flex; align-items:center; justify-content:center;">POROUS MESH</div>
+            </div>
         </section>
 
         <section id="modeling">
             <h2>Modeling & Analysis Approach</h2>
             <ul>
                 <li><strong>Airflow Analysis:</strong> Steady-state simulations identified velocity profiles and stagnation zones.</li>
-                <li><strong>Turbulence Evaluation:</strong> Reynolds number and turbulence intensity quantified enhancement effects.</li>
+                <li><strong>Turbulence Evaluation:</strong> Reynolds number and turbulence intensity quantified the effect of enhancements.</li>
                 <li><strong>Thermal Performance:</strong> Outlet temperature rise measured to evaluate heat transfer.</li>
             </ul>
-            <figure>
-                <img src="images/analysis_workflow.jpg" alt="Analysis workflow diagram">
-                <figcaption>Figure 9: Modelling and analysis workflow: Geometry → CFD → Post-processing → Metrics.</figcaption>
-            </figure>
+
+            <div style="border:2px solid red; background-color:#ffecec; height:180px; display:flex; align-items:center; justify-content:center; margin-top:15px;">
+                CFD MODEL / VELOCITY & TEMPERATURE PLACEHOLDER
+            </div>
         </section>
 
         <section id="calculations">
             <h2>Key Calculations & Performance Metrics</h2>
-            <ul>
-                <li><strong>Reynolds Number (Re):</strong> Characterizes airflow regime and turbulence intensity.</li>
-                <li><strong>Temperature Rise (ΔT):</strong> Difference between outlet and inlet air temperatures.</li>
-                <li><strong>Energy Balance (Q):</strong> Thermal energy recovered: Q = ṁ·c<sub>p</sub>·ΔT</li>
-                <li><strong>Effective Thermal Transmittance (U<sub>eff</sub>):</strong> Heat transfer from PV surface to airflow: U<sub>eff</sub> = Q / (A·ΔT<sub>avg</sub>)</li>
-            </ul>
-            <figure>
-                <img src="images/performance_table_baseline.jpg" alt="Baseline concept performance metrics">
-                <figcaption>Table 1: Baseline concept performance metrics (Re, velocity, ΔT).</figcaption>
-            </figure>
-            <figure>
-                <img src="images/performance_table_final.jpg" alt="Final concept performance metrics">
-                <figcaption>Table 2: Final concept performance metrics (Re, velocity, ΔT).</figcaption>
-            </figure>
+            <p>Metrics provided insight into turbulence generation, heat transfer effectiveness, and overall system performance.</p>
+
+            <div style="border:2px solid red; background-color:#ffecec; height:180px; display:flex; align-items:center; justify-content:center; margin-top:15px;">
+                CALCULATION TABLE / DIAGRAM PLACEHOLDER
+            </div>
         </section>
 
         <section id="results">
             <h2>Results & Performance Evaluation</h2>
             <ul>
-                <li>Outlet air temperature increase: ~8.7°C</li>
-                <li>Sustained turbulent flow along the full duct length</li>
-                <li>Higher Reynolds numbers vs baseline</li>
-                <li>Improved PV electrical efficiency (~0.4% per °C reduction in panel temperature)</li>
+                <li>Outlet air temperature increase: ~8.7°C.</li>
+                <li>Sustained turbulent flow along full duct length.</li>
+                <li>Higher Reynolds numbers vs baseline.</li>
+                <li>Improved PV electrical efficiency (~0.4% per °C reduction in panel temperature).</li>
             </ul>
-            <figure>
-                <img src="images/reynolds_initial_final.jpg" alt="Reynolds number comparison">
-                <figcaption>Figure 10: Reynolds number comparison — initial vs final concept.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temperature_initial_final.jpg" alt="Temperature rise comparison">
-                <figcaption>Figure 11: Outlet temperature comparison — initial vs final concept.</figcaption>
-            </figure>
+
+            <div style="border:2px solid red; background-color:#ffecec; height:180px; display:flex; align-items:center; justify-content:center; margin-top:15px;">
+                RESULTS GRAPHS / CFD OVERLAY PLACEHOLDER
+            </div>
         </section>
 
-        <section id="tradeoffs-limitations">
-            <h2>Design Tradeoffs, Limitations & Future Work</h2>
+        <section id="tradeoffs">
+            <h2>Design Tradeoffs & Future Work</h2>
             <ul>
-                <li><strong>Passive vs Active:</strong> Chose passive enhancements (fins, mesh) to reduce energy use and complexity.</li>
-                <li><strong>Turbulence vs Pressure Loss:</strong> Optimized geometry for efficient mixing with minimal resistance.</li>
-                <li><strong>Manufacturability & Cost:</strong> Simplified for easy fabrication and rooftop integration.</li>
-                <li><strong>Flow Uniformity vs Simplicity:</strong> Maintained uniform airflow without adaptive control.</li>
+                <li>Passive vs Active: Chose passive enhancements (fins, porous mesh) to reduce energy use and complexity.</li>
+                <li>Turbulence vs Pressure Loss: Optimized fin/mesh geometry for efficient mixing with minimal resistance.</li>
+                <li>Manufacturability & Cost: Simplified designs for easy fabrication and rooftop integration.</li>
             </ul>
-            <ul>
-                <li>Simulation-only; no experimental validation.</li>
-                <li>Steady-state assumptions; transient effects not modeled</li>
-                <li>Idealized geometries and materials</li>
-                <li>Pressure loss assessed qualitatively</li>
-            </ul>
-            <ul>
-                <li>Experimental validation of airflow and temperature rise</li>
-                <li>Transient simulations with solar variability and refined turbulence models</li>
-                <li>Optimization of fins/mesh for heat transfer vs pressure drop</li>
-                <li>Investigate adaptive airflow control (variable fan speed, dampers)</li>
-                <li>Integration with full residential air-source heat pump systems</li>
-            </ul>
+
+            <div style="border:2px solid red; background-color:#ffecec; height:180px; display:flex; align-items:center; justify-content:center; margin-top:15px;">
+                TRADEOFFS / FUTURE WORK PLACEHOLDER
+            </div>
         </section>
 
         <section id="tools">
@@ -230,26 +178,14 @@
                 <li><img src="icons/excel.png" alt="Excel" class="tool-icon"> Microsoft Excel – data analysis & post-processing</li>
                 <li><img src="icons/autocad.png" alt="AutoCAD" class="tool-icon"> AutoCAD – control & instrumentation schematics</li>
             </ul>
-            <ul>
-                <li>Fluid Mechanics & Internal Flow Analysis</li>
-                <li>Heat Transfer & Thermal Systems Analysis</li>
-                <li>Performance Metrics Evaluation</li>
-            </ul>
-            <ul>
-                <li>Concept Generation & Comparative Design Evaluation</li>
-                <li>Assumptions & Constraint Management</li>
-                <li>Technical Reporting & Communication</li>
-            </ul>
         </section>
 
         <section id="role">
             <h2>My Role & Team Contributions</h2>
             <ul>
-                <li><strong>CFD Modeling & Simulation:</strong> Developed airflow channel model and implemented enhancement geometries (fins, porous mesh).</li>
-                <li><strong>Thermal Analysis & Evaluation:</strong> Calculated outlet temperature rise, Reynolds number, and energy balance across designs.</li>
-                <li><strong>Comparative Assessment:</strong> Synthesized baseline, intermediate, and final designs into clear tables and visualizations.</li>
-                <li><strong>Technical Documentation:</strong> Integrated simulation results into reports and presentations; ensured clarity and consistency.</li>
-                <li><strong>Team Collaboration:</strong> Coordinated design integration, supporting task planning and workflow within the team.</li>
+                <li><strong>CFD Modeling & Simulation:</strong> Developed airflow channel model and implemented enhancement geometries.</li>
+                <li><strong>Thermal Analysis:</strong> Calculated outlet temperature rise, Reynolds number, and energy balance across designs.</li>
+                <li><strong>Documentation:</strong> Integrated simulation results into reports and presentations; ensured clarity.</li>
             </ul>
         </section>
 
