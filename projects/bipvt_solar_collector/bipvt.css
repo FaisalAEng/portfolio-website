@@ -1,117 +1,144 @@
-    /* Bipvt Capstone – Webpage Css */
+/* =========================================================
+   BIPVT Capstone – Project-Specific Styles
+   Scoped to .project-bipvt to avoid global conflicts
+   ========================================================= */
 
-    :root {
-        /* Accent color – change this ONE value to test themes */
-        --accent-color: #4a6fa5; /* muted blue (default) */
-        /* Examples to try:
-           dark green: #3f6f5e;
-           charcoal:  #2f3437;
-        */
-      
-        --bg-light: #ffffff;
-        --bg-alt: #f5f7f9;
-        --text-main: #222222;
-        --text-muted: #555555;
-      }
-      /* remove since already in global
-      * {
-        box-sizing: border-box;
-      }
-      */
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color: var(--text-main);
-        background: var(--bg-light);
-        line-height: 1.6;
-      }
-      
-      .section {
-        padding: 4rem 1.5rem;
-      }
-      
-      .section.alt {
-        background: var(--bg-alt);
-      }
-      
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-      
-      .two-col {
-        display: flex;
-        gap: 3rem;
-        align-items: center;
-      }
-      
-      .two-col .text {
-        flex: 1.2;
-      }
-      
-      .two-col .image-placeholder {
-        flex: 1;
-      }
-      
-      h1, h2, h3 {
-        color: var(--accent-color);
-        margin-top: 0;
-      }
-      
-      .subtitle {
-        font-size: 1.1rem;
-        color: var(--text-muted);
-      }
-      
-      .image-placeholder {
-        min-height: 220px;
-        background: #e53935; /* red fill */
-        border: 2px solid #000000; /* black outline */
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-      }
-      
-      .image-row {
-        display: flex;
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-      
-      .concept-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-      
-      .concept h3 {
-        margin-bottom: 0.25rem;
-      }
-      
-      .results {
-        list-style: none;
-        padding-left: 0;
-      }
-      
-      .results li::before {
-        content: "• ";
-        color: var(--accent-color);
-      }
-      
-      footer.footer {
-        padding: 2rem 1.5rem;
-        text-align: center;
-        background: var(--bg-alt);
-        font-size: 0.9rem;
-      }
-      
-      @media (max-width: 800px) {
-        .two-col {
-          flex-direction: column;
-        }
-      }
+/* -----------------------------
+   Theme Variables (Project-only)
+   Change --accent-color to test themes
+   ----------------------------- */
+   .project-bipvt {
+    /* Accent color – change ONE value to test themes */
+    --accent-color: #4a6fa5; /* muted blue (default) */
+    /* Examples to try:
+       dark green: #3f6f5e;
+       charcoal:  #2f3437;
+    */
+  
+    --bg-light: #ffffff;
+    --bg-alt: #f5f7f9;
+    --text-main: #222222;
+    --text-muted: #555555;
+  
+    color: var(--text-main);
+    background: var(--bg-light);
+  }
+  
+  /* -----------------------------
+     Layout Sections
+     ----------------------------- */
+  .project-bipvt .section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .project-bipvt .section.alt {
+    background: var(--bg-alt);
+  }
+  
+  .project-bipvt .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* -----------------------------
+     Two-Column Layout
+     ----------------------------- */
+  .project-bipvt .two-col {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .project-bipvt .two-col .text {
+    flex: 1.2;
+  }
+  
+  .project-bipvt .two-col .image-placeholder {
+    flex: 1;
+  }
+  
+  /* -----------------------------
+     Typography
+     ----------------------------- */
+  .project-bipvt h1,
+  .project-bipvt h2,
+  .project-bipvt h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+  }
+  
+  .project-bipvt .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+  
+  /* -----------------------------
+     Image Placeholders
+     (Temporary – replace with <img> later)
+     ----------------------------- */
+  .project-bipvt .image-placeholder {
+    min-height: 220px;
+    background: #e53935;          /* red fill */
+    border: 2px solid #000000;    /* black outline */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Horizontal image row */
+  .project-bipvt .image-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* -----------------------------
+     Concept / Feature Grid
+     ----------------------------- */
+  .project-bipvt .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-bipvt .concept h3 {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* -----------------------------
+     Results List
+     ----------------------------- */
+  .project-bipvt .results {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .project-bipvt .results li::before {
+    content: "• ";
+    color: var(--accent-color);
+  }
+  
+  /* -----------------------------
+     Footer
+     ----------------------------- */
+  .project-bipvt footer.footer {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--bg-alt);
+    font-size: 0.9rem;
+  }
+  
+  /* -----------------------------
+     Adjustments
+     ----------------------------- */
+  @media (max-width: 800px) {
+    .project-bipvt .two-col {
+      flex-direction: column;
+    }
+  }
+  
