@@ -453,3 +453,31 @@ footer {
         font-size: 1.4em;
     }
 }
+
+.placeholder {
+    border: 2px solid black;
+    background-color: red;
+    height: 200px;
+    margin: 20px 0;
+}
+
+.full-width-placeholder {
+    width: 100%;
+    height: 300px;
+}
+
+.text-image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.text-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.image-column {
+    flex: 1;
+    min-width: 250px;
+}
