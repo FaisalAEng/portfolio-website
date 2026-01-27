@@ -7,26 +7,28 @@
    Theme Variables (Project-only)
    Change --accent-color to test themes
    ----------------------------- */
-   .project-bipvt {
-    /* Accent color – change ONE value to test themes */
-    --accent-color: #4a6fa5; /* muted blue (default) */
-    /* Examples to try:
-       dark green: #3f6f5e;
-       charcoal:  #2f3437;
-    */
-  
+   
+/* =========================================================
+   BIPVT Capstone – Project-Specific Styles
+   Scoped to .project-bipvt
+========================================================= */
+
+.project-bipvt {
+    /* Project theme variables */
+    --accent-color: #4a6fa5; /* muted blue */
     --bg-light: #ffffff;
     --bg-alt: #f5f7f9;
-    --text-main: #222222;
-    --text-muted: #555555;
+    --text-main: #222;
+    --text-muted: #555;
   
     color: var(--text-main);
     background: var(--bg-light);
   }
   
-  /* -----------------------------
-     Layout Sections
-     ----------------------------- */
+  /* =========================================================
+     Sections & Layout
+  ========================================================= */
+  
   .project-bipvt .section {
     padding: 4rem 1.5rem;
   }
@@ -40,9 +42,10 @@
     margin: 0 auto;
   }
   
-  /* -----------------------------
+  /* =========================================================
      Two-Column Layout
-     ----------------------------- */
+  ========================================================= */
+  
   .project-bipvt .two-col {
     display: flex;
     gap: 3rem;
@@ -57,9 +60,10 @@
     flex: 1;
   }
   
-  /* -----------------------------
+  /* =========================================================
      Typography
-     ----------------------------- */
+  ========================================================= */
+  
   .project-bipvt h1,
   .project-bipvt h2,
   .project-bipvt h3 {
@@ -72,55 +76,70 @@
     color: var(--text-muted);
   }
   
-  /* -----------------------------
-     Image Placeholders
-     (Temporary – replace with <img> later)
-     ----------------------------- */
+  /* =========================================================
+     Image Placeholders (temporary) **remove once done adding all images**
+  ========================================================= */
+  
   .project-bipvt .image-placeholder {
     min-height: 220px;
-    background: #e53935;          /* red fill */
-    border: 2px solid #000000;    /* black outline */
-    color: #ffffff;
+    background: #e53935;
+    border: 2px solid #000;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 1rem;
-    font-size: 0.9rem;
   }
   
-  /* Horizontal image row */
+  /* Horizontal image rows */
   .project-bipvt .image-row {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
   }
+
+  /* =========================================================
+   Figures & Images
+========================================================= */
+
+.project-bipvt .figure {
+    margin: 0;
+  }
   
-  /* -----------------------------
-     Concept / Feature Grid
-     ----------------------------- */
+  .project-bipvt .figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+  
+  .project-bipvt .figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  
+  
+  /* =========================================================
+     Design Concept Grid
+  ========================================================= */
+  
   .project-bipvt .concept-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    justify-content: center; /* center grid horizontally */
     margin-top: 2rem;
-}
-
-@media (max-width: 600px) {
-    .concept-grid {
-        grid-template-columns: 1fr; /* stacks for mobile */
-    }
-}
-
+  }
   
   .project-bipvt .concept h3 {
     margin-bottom: 0.25rem;
   }
   
-  /* -----------------------------
+  /* =========================================================
      Results List
-     ----------------------------- */
+  ========================================================= */
+  
   .project-bipvt .results {
     list-style: none;
     padding-left: 0;
@@ -131,22 +150,28 @@
     color: var(--accent-color);
   }
   
-  /* -----------------------------
-     Footer
-     ----------------------------- */
+  /* =========================================================
+     Footer (override visuals only)
+  ========================================================= */
+  
   .project-bipvt footer.footer {
-    padding: 2rem 1.5rem;
-    text-align: center;
     background: var(--bg-alt);
-    font-size: 0.9rem;
   }
   
-  /* -----------------------------
-     Adjustments
-     ----------------------------- */
+  /* =========================================================
+     Responsive
+  ========================================================= */
+  
   @media (max-width: 800px) {
     .project-bipvt .two-col {
       flex-direction: column;
     }
   }
   
+  @media (max-width: 600px) {
+    .project-bipvt .concept-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /*removed header comments duplicates and footer font+padding*/

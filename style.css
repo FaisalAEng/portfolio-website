@@ -7,21 +7,20 @@
 ====================================================== */
 
 :root {
-    --color-primary: #004080;   /* main site color (headers, skills) */
-    --color-accent:  #e67e22;   /* buttons, badges */
-    --color-accent-alt: #007acc;/* secondary accent */
-    
+    --color-primary: #004080;
+    --color-accent: #e67e22;
+    --color-accent-alt: #007acc;
+  
     --color-bg-main: #f7f7f7;
     --color-bg-card: #ffffff;
-    
+  
     --color-text-main: #333;
     --color-text-muted: #555;
-    
+  
     --radius-sm: 5px;
     --radius-md: 8px;
     --shadow-sm: 0 2px 6px rgba(0,0,0,0.1);
   }
-  
   
   /* ======================================================
      RESET & BASE
@@ -40,17 +39,15 @@
     background-color: var(--color-bg-main);
   }
   
-  
   /* ======================================================
-     GLOBAL LAYOUT
+     PORTFOLIO PAGE LAYOUT ONLY
   ====================================================== */
   
-  section {
+  .portfolio section {
     padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
   }
-  
   
   /* ======================================================
      HEADERS
@@ -71,7 +68,6 @@
     margin: 15px 0;
   }
   
-  
   /* ======================================================
      PROJECT GRID & CARDS
   ====================================================== */
@@ -87,15 +83,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: stretch;
-    max-width: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-sm);
     padding: 10px;
     position: relative;
     overflow: hidden;
-}
+  }
   
   .project-card.featured {
     border: 2px solid #bfa34a;
@@ -116,16 +110,15 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
-    text-overflow: ellipsis;
     max-height: 1.4em;
     transition: max-height 0.4s ease 0.8s;
-}
+  }
   
   .project-card:hover .project-desc {
     -webkit-line-clamp: unset;
     max-height: 200px;
     margin-bottom: 15px;
-}
+  }
   
   /* ======================================================
      BADGES
@@ -152,9 +145,8 @@
     background-color: var(--color-accent-alt);
   }
   
-  
   /* ======================================================
-     BUTTONS (GLOBAL)
+     BUTTONS
   ====================================================== */
   
   .btn {
@@ -170,6 +162,12 @@
     font-weight: 500;
   }
   
+  .btn svg,
+  .btn img {
+    width: 16px;
+    height: 16px;
+  }
+  
   .github-btn {
     background: transparent;
     border: 1px solid var(--color-text-main);
@@ -180,10 +178,16 @@
     background-color: var(--color-accent-alt);
   }
   
-  
   /* ======================================================
      SKILLS
   ====================================================== */
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
   
   .skill-pill {
     background-color: #007bff;
@@ -193,19 +197,12 @@
     font-size: 0.9rem;
     cursor: default;
     transition: transform 0.2s, background-color 0.2s;
-}
-
-.skill-pill:hover {
+  }
+  
+  .skill-pill:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-}
-  
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
+  }
   
   /* ======================================================
      FOOTER
@@ -218,7 +215,6 @@
     color: #777;
     font-size: 0.9em;
   }
-  
   
   /* ======================================================
      RESPONSIVE
