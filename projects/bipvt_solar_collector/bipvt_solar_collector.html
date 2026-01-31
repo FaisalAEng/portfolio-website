@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="bipvt.css">
 </head>
 
+<!-- Research Site Banner -->
+<section class="site-banner">
+    <img src="images_figures/images/kortright_solar_array2.jpg"
+         alt="Solar panel array at the Kortright Centre research site">
+</section>
+<div class="section h1">
+    <h1>
+     <figcaption>Kortright Research Site</figcaption>
+    </h1>
+     </div>
+
 <body class="project-bipvt"> <!--class="project-bipvt" on <body> ensures bipvt.css only applies here-->
 
     <!-- Hero / Project Overview -->
     <section class="section hero">
         <div class="container two-col">
             <div class="text">
-                <h1>BIPV/T Solar Air Collector – Capstone Project</h1>
+                <h2>BIPV/T Solar Air Collector – Capstone Project</h2>
                 <p class="subtitle">
                     Building‑Integrated Photovoltaic/Thermal system designed and evaluated
                     through simulation and on‑site context at the Kortright Centre for Conservation.
@@ -26,7 +37,7 @@
                     and an existing PV installation at the Kortright Centre for Conservation.
                 </p>
                 <p>
-                    Kortright conducts applied research and demonstration projects</a> to
+                    Kortright conducts applied research and demonstration projects to
                     evaluate practical, low‑carbon building technologies in real‑world
                     conditions.
                     Visit <a href="https://kortright.org/about-us/what-we-do/" target="_blank" rel="noopener">Kortright Centre</a> and learn more <a href="https://sustainabletechnologies.ca/" target="_blank" rel="noopener"><strong>here</strong></a>.
@@ -37,7 +48,7 @@
                 <img src="images_figures\images\bipvt_solar_collector.jpg"
                      alt="Kortright Centre for Conservation research site">
                 <figcaption>
-                    Kortright Centre Research Site
+                    Kortright Research BIPV/T Prototype
                 </figcaption>
             </figure>
             </div>
@@ -46,7 +57,8 @@
     
     <!-- Problem Context -->
     <section class="section">
-        <div class="container">
+        <div class="container two-col">
+            <div class="text">
             <h2>Problem Context</h2>
             <p>
                 Residential heating in Ontario has historically relied on natural gas due
@@ -60,17 +72,28 @@
                 Elevated panel temperatures reduce electrical efficiency and contribute
                 to long‑term material degradation.
             </p>
-            <div class="image-row">
-                <div class="image-placeholder">Conventional PV thermal loss</div>
-                <div class="image-placeholder">BIPV/T thermal recovery</div>
             </div>
+            <div class="image-row">
+                <figure class="figure">
+                    <img src="images_figures/images/Conventional PV thermal loss.png"
+                         alt="Conventional PV thermal loss diagram">
+                    <figcaption>Conventional PV thermal loss</figcaption>
+                </figure>
+            </div>
+            
         </div>
     </section>
     
     <!-- System Description -->
     <section class="section alt">
         <div class="container two-col">
-            <div class="image-placeholder">BIPV/T system schematic</div>
+            <div class="image-row">
+                    <figure class="figure">
+                        <img src="images_figures/images/BIPVT thermal recovery.png"
+                             alt="BIPV/T thermal recovery diagram">
+                        <figcaption>BIPV/T thermal recovery</figcaption>
+                    </figure>
+            </div>
             <div class="text">
                 <h2>System Description</h2>
                 <p>
@@ -97,26 +120,64 @@
                 improve convective heat transfer while maintaining feasibility for
                 residential implementation.
             </p>
+
+            <p class="legend">
+                <strong>Note:</strong> Thermal simulation illustrate air temperature distribution within the duct, where 
+                <span class="cold">blue</span> indicates cooler regions and 
+                <span class="hot">yellow–red</span> indicates warmer regions. 
+                More uniform warm colours indicate improved heat transfer.
+            </p>
+            
             <div class="concept-grid">
                 <div class="concept">
-                    <div class="image-placeholder">Baseline configuration</div>
-                    <h3>Baseline</h3>
-                    <p>No internal enhancements; used as a reference case.</p>
+                    <figure class="figure">
+                        <img src="images_figures/conceptbaselineconfiguration.png"
+                             alt="Baseline BIPV/T airflow simulation showing limited heat transfer">
+                        <figcaption>
+                            <strong>Simple Air Channel:</strong> Baseline configuration with minimal airflow guidance, resulting in cooler regions
+                            and non-uniform heat extraction.No internal enhancements; used as a reference case.
+                        </figcaption>
+                    </figure>
                 </div>
                 <div class="concept">
-                    <div class="image-placeholder">Guiding wall concept</div>
-                    <h3>Guiding Walls</h3>
-                    <p>Redirected airflow to reduce stagnation zones.</p>
+                    <figure class="figure">
+                    <img src="images_figures/conceptwallsconfiguration-inletside-inletbottom-left-right.png"
+                         alt="Simulation showing improved airflow with guiding walls">
+                    <figcaption>
+                        <strong>Guiding Walls Concept: </strong> Guiding walls reduce cool zones and enhance
+                        heat recovery along the duct.
+                        Guiding wall concept promoting better airflow distribution and increased heat
+                        transfer along the duct. Example of concept (left), position of fan inlet to side of system (left) vs bottom of system (right).
+                    </figcaption>
+                </figure>
                 </div>
+
                 <div class="concept">
-                    <div class="image-placeholder">Fin enhancement</div>
-                    <h3>Fins</h3>
-                    <p>Increased surface area and disrupted laminar flow.</p>
+                    <figure class="figure">
+                        <img src="images_figures/conceptfinsconfiguration-inletside-inletbottom-left-right.png"
+                                alt="Simulation showing improved airflow with fins enhancements">
+                        <figcaption>
+                            <strong>Fins Enhancement Concept:</strong>
+                            Fin enhancement increasing surface interaction and promoting warmer, more
+                            uniform temperature distribution. Example of concept (left), position of fan inlet to side of system (center) vs bottom of system (right).
+                        </figcaption>
+                    </figure>
                 </div>
+
                 <div class="concept">
-                    <div class="image-placeholder">Porous mesh</div>
-                    <h3>Porous Mesh</h3>
-                    <p>Promoted turbulence and mixing with modest pressure impact.</p>
+                    <figure class="figure">
+                        <img src="images_figures/conceptmeshconfiguration-inletside-inletbottom-left-right.png"
+                                alt="Thermal simulation of porous mesh airflow enhancement">
+                        <figcaption>
+                            <strong>Porous Mesh Concept:</strong>
+                            Porous metal mesh promotes turbulent airflow, increasing heat transfer from the
+                            panel surface. Improved thermal recovery at the
+                            cost of increased flow resistance.
+                            Porous materials introduce additional flow resistance and were evaluated for performance
+                            vs pressure drop trade-offs. Promoted turbulence and mixing with modest pressure impact.
+                            Example of concept (left), position of fan inlet to side of system (left) vs bottom of system (right).
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -126,16 +187,114 @@
     <section class="section alt">
         <div class="container">
             <h2>Key Results</h2>
+
+            <p>
+                The original baseline design had only two temperature sensors at the inlet and outlet, so <strong>performance data</strong> along the duct was not available. 
+                Subsequent iterations included distributed sensor measurements to quantify the effect of passive design enhancements.
+            </p>
+            
+            <br>
+
             <ul class="results">
-                <li>~8.7 °C outlet air temperature increase</li>
-                <li>Sustained turbulent flow along the duct length</li>
-                <li>Higher Reynolds numbers compared to baseline</li>
-                <li>Estimated PV efficiency improvement (~0.4% per °C reduction)</li>
+                <li>Outlet air temperature increased by ~8.7°C with the implemented BIPV/T system (initial and final concepts).</li>
+                <li>Flow along the duct became more turbulent, with higher Reynolds numbers in the final iteration compared to the initial concept.</li>
+                <li>Temperature distribution along the duct became more uniform, reducing stagnation zones.</li>
+                <li>Estimated PV efficiency improvement of ~0.4% per °C reduction in panel temperature.</li>            
             </ul>
-            <div class="image-row">
-                <div class="image-placeholder">Reynolds vs distance</div>
-                <div class="image-placeholder">Temperature vs distance</div>
+
+            <div class="slider-compare"> <!--JS below switches between the two, this is the initial view-->
+                <figure class="graph">
+                    <img id="reynolds-img"
+                         src="images_figures/GraphRevsDInitial.png"
+                         alt="Reynolds number along duct length">
+                    <figcaption id="reynolds-caption">
+                        Figure A: Initial Concept – Reynolds number along duct length
+                    </figcaption>
+                </figure>
+            
+                <input type="range"
+                       min="0"
+                       max="1"
+                       step="1"
+                       value="0"
+                       aria-label="Toggle initial vs final Reynolds results"
+                       onchange="toggleReynolds(this.value)">
             </div>
+            
+            <div class="slider-compare">
+                <figure class="graph">
+                    <img id="temperature-img"
+                         src="images_figures/GraphTvsDInitial.png"
+                         alt="Temperature distribution along duct length">
+                    <figcaption id="temperature-caption">
+                        Figure C: Initial Concept – Temperature distribution along duct
+                    </figcaption>
+                </figure>
+            
+                <input type="range"
+                       min="0"
+                       max="1"
+                       step="1"
+                       value="0"
+                       aria-label="Toggle initial vs final temperature results"
+                       onchange="toggleTemperature(this.value)">
+            </div>
+            
+
+            <script>
+                function toggleReynolds(value) {
+                    const img = document.getElementById("reynolds-img");
+                    const caption = document.getElementById("reynolds-caption");
+                
+                    if (value === "0") {
+                        img.src = "images_figures/GraphRevsDInitial.png";
+                        caption.textContent = "Figure A: Initial Concept – Reynolds number along duct length";
+                    } else {
+                        img.src = "images_figures/GraphRevsDFinal.png";
+                        caption.textContent = "Figure B: Final Concept – Reynolds number along duct length";
+                    }
+                }
+            </script>
+        
+            <script>
+                function toggleTemperature(value) {
+                    const img = document.getElementById("temperature-img");
+                    const caption = document.getElementById("temperature-caption");
+                
+                    if (value === "0") {
+                        img.src = "images_figures/GraphTvsDInitial.png";
+                        caption.textContent = "Figure C: Initial Concept – Temperature distribution along duct";
+                    } else {
+                        img.src = "images_figures/GraphTvsDFinal.png";
+                        caption.textContent = "Figure D: Final Concept – Temperature distribution along duct";
+                    }
+                }
+            </script>                
+<!--            
+            <div class="image-row">
+                <figure class="graph">
+                    <img src="images_figures/GraphRevsDInitial.png" alt="Initial Reynolds vs Distance">
+                    <figcaption>Figure A: Initial Concept – Reynolds number along duct length</figcaption>
+                </figure>
+                
+                <figure class="graph">
+                    <img src="images_figures/GraphRevsDFinal.png" alt="Final Reynolds vs Distance">
+                    <figcaption>Figure B: Final Concept – Reynolds number along duct length</figcaption>
+                </figure>
+            </div>
+    
+            <div class="image-row">
+                <figure class="graph">
+                    <img src="images_figures/GraphTvsDInitial.png" alt="Initial Temperature vs Distance">
+                    <figcaption>Figure C: Initial Concept – Temperature distribution along duct</figcaption>
+                </figure>
+                
+                <figure class="graph">
+                    <img src="images_figures/GraphTvsDFinal.png" alt="Final Temperature vs Distance">
+                    <figcaption>Figure D: Final Concept – Temperature distribution along duct</figcaption>
+                </figure>
+            </div>
+-->
         </div>
     </section>
     
@@ -143,13 +302,14 @@
     <footer class="footer">
         <h2>Links & Deep Dives</h2>
             <ul>
-                Full academic report available as a <a href="https://FaisalAEng.github.io/portfolio-website/projects/bipvt_solar_collector/bipvt_solar_collector_report_ar_final_v1.pdf" target="_blank">linked PDF</a>.</ul>
-            <ul><a href="https://raw.githubusercontent.com/FaisalAEng/portfolio-website/main/projects/bipvt_solar_collector/bipvt_solar_collector_conference_paper.pdf" target="_blank">Conference Paper</a></ul>
-            <ul><a href="https://github.com/FaisalAEng/BIPVT_Solar_Collector" target="_blank">View GitHub</a></ul>
-            <ul><a href="https://FaisalAEng.github.io/portfolio-website/">Back to Portfolio</a></ul>
+                Full academic report available as a <a class="back-link" href="https://FaisalAEng.github.io/portfolio-website/projects/bipvt_solar_collector/bipvt_solar_collector_report_ar_final_v1.pdf" target="_blank">linked PDF</a>.</ul>
+            <ul><a class="back-link" href="https://raw.githubusercontent.com/FaisalAEng/portfolio-website/main/projects/bipvt_solar_collector/bipvt_solar_collector_conference_paper.pdf" target="_blank">Conference Paper</a></ul>
+            <ul><a class="back-link" href="https://github.com/FaisalAEng/BIPVT_Solar_Collector" target="_blank">View GitHub</a></ul>
+            <ul><a class="back-link" href="https://FaisalAEng.github.io/portfolio-website/">Back to Portfolio</a></ul>
         <p style="margin-top:20px; font-size:0.9em; color:#777;">© 2026 Faisal A. Mechanical Engineering Portfolio. All rights reserved.</p>
     </footer>
     
+       
     </body>
     
 </html>
